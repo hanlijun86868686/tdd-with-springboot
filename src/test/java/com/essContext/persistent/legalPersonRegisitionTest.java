@@ -16,12 +16,12 @@ class legalPersonRegisitionTest extends BaseTest {
     @Test
     void should_return_services_success_when_register_given_legalPerson_info() throws Exception {
         LegalPersonRequest legalPersonRequest = new LegalPersonRequest();
-        legalPersonRequest.setIdCode("Q55699331123");
-        legalPersonRequest.setIdType("222");
-        legalPersonRequest.setCompanyCode("324234234231MM12E");
-        legalPersonRequest.setCompanyName("吉林公司");
-        legalPersonRequest.setName("张三");
-        legalPersonRequest.setType("1");
+        legalPersonRequest.setIdCode("220103198708054511");
+        legalPersonRequest.setIdType("111");
+        legalPersonRequest.setCompanyCode("53110000082821274K");
+        legalPersonRequest.setCompanyName("My公司");
+        legalPersonRequest.setName("郭老师");
+        legalPersonRequest.setType("2");
         LegalPerson legalPerson = legalPersonService.register(legalPersonRequest);
         assertTrue(legalPerson.getId().length() > 0);
     }
@@ -29,12 +29,12 @@ class legalPersonRegisitionTest extends BaseTest {
     @Test
     void shoule_return_services_success_when_register_given_certcardno_info() throws Exception {
         LegalPersonRequest legalPersonRequest = new LegalPersonRequest();
-        legalPersonRequest.setIdCode("220381198801010201");
+        legalPersonRequest.setIdCode("220103198708054511");
         legalPersonRequest.setIdType("111");
-        legalPersonRequest.setCompanyCode("324234234231MM12E");
-        legalPersonRequest.setCompanyName("吉林公司");
-        legalPersonRequest.setName("张三");
-        legalPersonRequest.setType("1");
+        legalPersonRequest.setCompanyCode("53110000082821274K");
+        legalPersonRequest.setCompanyName("My公司");
+        legalPersonRequest.setName("郭老师");
+        legalPersonRequest.setType("2");
         LegalPerson legalPerson = legalPersonService.register(legalPersonRequest);
         assertTrue(legalPerson.getId().length() > 0);
     }
@@ -42,11 +42,11 @@ class legalPersonRegisitionTest extends BaseTest {
     @Test
     void shoule_return_services_success_when_register_given_password_info() throws Exception {
         LegalPersonRequest legalPersonRequest = new LegalPersonRequest();
-        legalPersonRequest.setIdCode("W1225112231121");
-        legalPersonRequest.setIdType("222");
-        legalPersonRequest.setCompanyCode("A101101001111111");
-        legalPersonRequest.setCompanyName("长春公司");
-        legalPersonRequest.setName("李四");
+        legalPersonRequest.setIdCode("220103198708054511");
+        legalPersonRequest.setIdType("111");
+        legalPersonRequest.setCompanyCode("53110000082821274F");
+        legalPersonRequest.setCompanyName("My公司");
+        legalPersonRequest.setName("店小二");
         legalPersonRequest.setType("1");
         LegalPerson legalPerson = legalPersonService.register(legalPersonRequest);
         assertTrue(legalPerson.getId().length() > 0);
@@ -55,11 +55,11 @@ class legalPersonRegisitionTest extends BaseTest {
     @Test
     void should_retrun_unsucess_legalperson_empty() throws Exception {
         LegalPersonRequest legalPersonRequest = new LegalPersonRequest();
-        legalPersonRequest.setIdCode("W1225112231121");
-        legalPersonRequest.setIdType("222");
+        legalPersonRequest.setIdCode("220103198708054511");
+        legalPersonRequest.setIdType("111");
         legalPersonRequest.setCompanyCode("");
         legalPersonRequest.setCompanyName("");
-        legalPersonRequest.setName("李四");
+        legalPersonRequest.setName("店小二");
         legalPersonRequest.setType("1");
 
         LegalPerson legalPerson = legalPersonService.register(legalPersonRequest);
@@ -188,5 +188,4 @@ class legalPersonRegisitionTest extends BaseTest {
         LegalPerson legalPerson = legalPersonService.register(legalPersonRequest);
         assertTrue(legalPerson.getId().length() > 0);
     }
-}
 }
